@@ -5,9 +5,9 @@ extends Node3D
 @export var textures: Array[Texture2D]
 var tonemappers: Dictionary = {
 		Environment.TONE_MAPPER_LINEAR: [1.0, "Linear"],
-		Environment.TONE_MAPPER_REINHARDT: [16.0, "Reinhard"],
-		Environment.TONE_MAPPER_FILMIC: [16.0, "Filmic"],
-		Environment.TONE_MAPPER_ACES: [16.0, "ACES"],
+		Environment.TONE_MAPPER_REINHARDT: [6.0, "Reinhard"],
+		Environment.TONE_MAPPER_FILMIC: [6.0, "Filmic"],
+		Environment.TONE_MAPPER_ACES: [6.0, "ACES"],
 }
 
 
