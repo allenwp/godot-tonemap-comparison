@@ -1,0 +1,40 @@
+[gd_scene load_steps=15 format=3 uid="uid://dc4nw3wc8i771"]
+
+[ext_resource type="Texture2D" uid="uid://bwaqqakibotfu" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max1Saturation100.exr" id="1_684wq"]
+[ext_resource type="Script" path="res://image_saver.gd" id="1_piulw"]
+[ext_resource type="Material" uid="uid://cnrs06syckbl6" path="res://unshaded-texture.material" id="2_q7dku"]
+[ext_resource type="Texture2D" uid="uid://cayf2oichpst0" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max1Saturation0.exr" id="3_h58op"]
+[ext_resource type="Texture2D" uid="uid://d1gvmnncgsgra" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max1Saturation25.exr" id="4_87oya"]
+[ext_resource type="Texture2D" uid="uid://drh6iqd6sdl1p" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max18Saturation100.exr" id="4_sfdkd"]
+[ext_resource type="Texture2D" uid="uid://ye824pwwdee0" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max1Saturation50.exr" id="5_v3tdp"]
+[ext_resource type="Texture2D" uid="uid://ci8rpn5am6tol" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max1Saturation75.exr" id="6_mlkvv"]
+[ext_resource type="Texture2D" uid="uid://dhs8vwfrwti4b" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max18Saturation0.exr" id="8_tpjre"]
+[ext_resource type="Texture2D" uid="uid://ci83agw3t1lit" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max18Saturation25.exr" id="9_am84d"]
+[ext_resource type="Texture2D" uid="uid://wl2thigo3l43" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max18Saturation50.exr" id="10_gou42"]
+[ext_resource type="Texture2D" uid="uid://bd85gpkm3dpjl" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max18Saturation75.exr" id="11_b4js2"]
+
+[sub_resource type="Environment" id="Environment_dxs85"]
+background_mode = 1
+background_color = Color(0.43618, 0.43618, 0.43618, 1)
+ambient_light_source = 1
+reflected_light_source = 1
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vmr05"]
+
+[node name="Node3D" type="Node3D" node_paths=PackedStringArray("environment")]
+script = ExtResource("1_piulw")
+material = ExtResource("2_q7dku")
+environment = NodePath("WorldEnvironment")
+textures = Array[Texture2D]([ExtResource("3_h58op"), ExtResource("4_87oya"), ExtResource("5_v3tdp"), ExtResource("6_mlkvv"), ExtResource("1_684wq"), ExtResource("8_tpjre"), ExtResource("9_am84d"), ExtResource("10_gou42"), ExtResource("11_b4js2"), ExtResource("4_sfdkd")])
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_dxs85")
+
+[node name="texture" type="MeshInstance3D" parent="."]
+material_override = ExtResource("2_q7dku")
+mesh = SubResource("PlaneMesh_vmr05")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -5.96046e-08, 1, 0, -1, -5.96046e-08, 0, 0.402192, 0)
+projection = 1
+size = 2.0
