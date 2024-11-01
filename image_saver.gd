@@ -5,7 +5,9 @@ extends Node3D
 @export var textures: Array[Texture2D]
 var tonemappers: Dictionary = {
 		Environment.TONE_MAPPER_LINEAR: [1.0, "Linear"],
+		Environment.TONE_MAPPER_REINHARDT: [16.0, "Reinhard"],
 		Environment.TONE_MAPPER_FILMIC: [16.0, "Filmic"],
+		Environment.TONE_MAPPER_ACES: [16.0, "ACES"],
 }
 
 
@@ -21,7 +23,9 @@ func _ready() -> void:
 			environment.environment.tonemap_mode = tonemapper_index
 			environment.environment.tonemap_white = white
 			await get_tree().create_timer(0).timeout
-			_save_image("user://godot_%s_w%.1f_%s" % [tonemapper_str, white, texture.resource_path.get_basename().get_file()])
+			var folder_path = "user://godot_%s_w%.1f" % [tonemapper_str, white]
+			DirAccess.make_dir_recursive_absolute(folder_path)
+			_save_image("%s/godot_%s_w%.1f_%s" % [folder_path, tonemapper_str, white, texture.resource_path.get_basename().get_file()])
 
 	OS.shell_show_in_file_manager(ProjectSettings.globalize_path("user://"))
 
