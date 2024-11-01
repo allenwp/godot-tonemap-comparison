@@ -13,8 +13,6 @@ var tonemappers: Dictionary = {
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	await RenderingServer.frame_post_draw
-
 	for texture in textures:
 		for tonemapper_index in tonemappers:
 			var white: float = tonemappers[tonemapper_index][0]
@@ -23,9 +21,11 @@ func _ready() -> void:
 			environment.environment.tonemap_mode = tonemapper_index
 			environment.environment.tonemap_white = white
 			await get_tree().create_timer(0).timeout
-			var folder_path = "user://godot_%s_w%.1f" % [tonemapper_str, white]
+			await RenderingServer.frame_post_draw
+			var texture_name: String = texture.resource_path.get_basename().get_file()
+			var folder_path = "user://sdr_renders/%s" % texture_name
 			DirAccess.make_dir_recursive_absolute(folder_path)
-			_save_image("%s/godot_%s_w%.1f_%s" % [folder_path, tonemapper_str, white, texture.resource_path.get_basename().get_file()])
+			_save_image("%s/godot_%s_w%.1f_%s" % [folder_path, tonemapper_str, white, texture_name])
 
 	OS.shell_show_in_file_manager(ProjectSettings.globalize_path("user://"))
 
