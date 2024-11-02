@@ -15,6 +15,13 @@ Example:
 
 `godot/Max1Saturation100/godot_Linear_w1.0_Max1Saturation100.webp`
 
+## Max...Saturation... HDR Files
+These files were created with Photoshop to show a spread of all RGB colours at different saturation levels. All of these start with values at 0.0 on the left and go up to a maximum value, such as 1.0 or 18.0, on the right of the image.
+
+`Max1Saturation100`: Values from 0.0 to 1.0. Colours at 100% saturation.
+
+`Max18Saturation50`: Values from 0.0 to 18.0. Colours at 50% saturation.
+
 # Example Comparison of Blender and Godot
 | File & Tonemaps | Blender | Godot
 | --- | --- | ---
