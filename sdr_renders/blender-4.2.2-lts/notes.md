@@ -1,0 +1,1 @@
+These were gereated with Blender 4.2.2 LTS. For instructions on how to create these, see the [main readme for this repo](https://github.com/allenwp/godot-tonemap-comparison/tree/main?tab=readme-ov-file#generating-sdr-renders-in-blender).
