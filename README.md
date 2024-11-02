@@ -6,6 +6,15 @@ Tonemap comparison between Godot and Blender.
 2) Open multiple of these raw file links in your web browser and tab back and forth to see the differences.
 3) Alternatively, you can download the raw files and use an image comparison tool, such as a "difference" blend mode in an image editor or an online tool like [Diffchecker](https://www.diffchecker.com/image-compare/) or [ImageTools.org](https://www.imagetools.org/compare).
 
+# File Name Conventions
+File paths are:
+
+`[godot|blender-4.2.2-lts]/[HDR image name]/[godot|blender]_[tonemap name]_[godot white paramter]_[HDR image name].webp`
+
+Example:
+
+`godot/Max1Saturation100/godot_Linear_w1.0_Max1Saturation100.webp`
+
 # Example Comparison of Blender and Godot
 | File & Tonemaps | Blender | Godot
 | --- | --- | ---
