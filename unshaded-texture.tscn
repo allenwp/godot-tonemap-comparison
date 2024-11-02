@@ -28,7 +28,7 @@ reflected_light_source = 1
 script = ExtResource("1_piulw")
 material = ExtResource("2_q7dku")
 environment = NodePath("WorldEnvironment")
-textures = Array[Texture2D]([ExtResource("3_h58op"), ExtResource("4_87oya"), ExtResource("5_v3tdp"), ExtResource("6_mlkvv"), ExtResource("1_684wq"), ExtResource("8_tpjre"), ExtResource("9_am84d"), ExtResource("10_gou42"), ExtResource("11_b4js2"), ExtResource("4_sfdkd"), ExtResource("13_muhui"), ExtResource("14_ycvdp"), ExtResource("15_5qwj7")])
+textures = Array[Texture2D]([ExtResource("13_muhui"), ExtResource("14_ycvdp"), ExtResource("15_5qwj7"), ExtResource("1_684wq"), ExtResource("6_mlkvv"), ExtResource("5_v3tdp"), ExtResource("4_87oya"), ExtResource("3_h58op"), ExtResource("4_sfdkd"), ExtResource("11_b4js2"), ExtResource("10_gou42"), ExtResource("9_am84d"), ExtResource("8_tpjre")])
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_dxs85")

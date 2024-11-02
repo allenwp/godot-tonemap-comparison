@@ -8,6 +8,8 @@ var tonemappers: Dictionary = { # Array: white parameter, Tonemap name, Blender 
 		Environment.TONE_MAPPER_REINHARDT: [6.0, "Reinhard", ""],
 		Environment.TONE_MAPPER_FILMIC: [6.0, "Filmic", "Filmic"],
 		Environment.TONE_MAPPER_ACES: [6.0, "ACES", ""],
+		#Environment.TONE_MAPPER_AGX: [1.0, "AgX", "AgX"],
+		#Environment.TONE_MAPPER_AGX_PUNCHY: [1.0, "AgX_Punchy", "AgX_Punchy"],
 }
 
 
@@ -31,7 +33,7 @@ func _ready() -> void:
 			if blender != "":
 				var table_line: String = "| %s<br>**%s vs. %s_w%.1f**" % [texture_name, blender, tonemapper_str, white]
 				table_line += " | [blender_%s_%s]" % [blender, texture_name]
-				table_line += "(https://github.com/allenwp/godot-tonemap-comparison/raw/refs/heads/main/sdr_renders/blender/%s/blender_%s_%s.webp)" % [texture_name, blender, texture_name]
+				table_line += "(https://github.com/allenwp/godot-tonemap-comparison/raw/refs/heads/main/sdr_renders/blender-4.2.2-lts/%s/blender_%s_%s.webp)" % [texture_name, blender, texture_name]
 				table_line += " | [godot_%s_w%.1f_%s]" % [tonemapper_str, white, texture_name]
 				table_line += "(https://github.com/allenwp/godot-tonemap-comparison/raw/refs/heads/main/sdr_renders/godot/%s/godot_%s_w%.1f_%s.webp)" % [texture_name, tonemapper_str, white, texture_name]
 				print(table_line)
