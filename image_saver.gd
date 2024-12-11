@@ -8,8 +8,7 @@ var tonemappers: Dictionary = { # Array: white parameter, Tonemap name, Blender 
 		Environment.TONE_MAPPER_REINHARDT: [6.0, "Reinhard", ""],
 		Environment.TONE_MAPPER_FILMIC: [6.0, "Filmic", "Filmic"],
 		Environment.TONE_MAPPER_ACES: [6.0, "ACES", ""],
-		#Environment.TONE_MAPPER_AGX: [1.0, "AgX", "AgX"],
-		#Environment.TONE_MAPPER_AGX_PUNCHY: [1.0, "AgX_Punchy", "AgX_Punchy"],
+		Environment.TONE_MAPPER_AGX: [1.0, "AgX", "AgX"],
 }
 
 

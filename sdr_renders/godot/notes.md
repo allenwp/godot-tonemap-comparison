@@ -7,9 +7,8 @@ godot_Linear_w1.0
 godot_Reinhard_w16.0
 ```
 
-The following were generated with v4.4.dev.gh-87260 [b310868d8] from the AgX PR https://github.com/godotengine/godot/pull/87260 commit c3647bfbcdf031dc9c942fd9734ba1f68f62931a on Oct 2:
+The following were generated with v4.4.dev.gh-87260 [32fbb1928] from the AgX PR https://github.com/godotengine/godot/pull/87260 commit 3f2b9436b1563a408ebc8fe41fdb164d147760d7 on Dec 11, 2024:
 
 ```
 godot_AgX_w1.0
-godot_AgX_Punchy_w1.0
 ```
