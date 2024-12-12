@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dc4nw3wc8i771"]
+[gd_scene load_steps=16 format=3 uid="uid://dc4nw3wc8i771"]
 
 [ext_resource type="Texture2D" uid="uid://bwaqqakibotfu" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max1Saturation100.exr" id="1_684wq"]
 [ext_resource type="Script" path="res://image_saver.gd" id="1_piulw"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://ye824pwwdee0" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max1Saturation50.exr" id="5_v3tdp"]
 [ext_resource type="Texture2D" uid="uid://dhs8vwfrwti4b" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max18Saturation0.exr" id="8_tpjre"]
 [ext_resource type="Texture2D" uid="uid://wl2thigo3l43" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max18Saturation50.exr" id="10_gou42"]
+[ext_resource type="Texture2D" uid="uid://cfd7makwfjdrj" path="res://hdr_textures/HDR-dark-bands/HDR-dark-bands.exr" id="12_0uckw"]
+[ext_resource type="Texture2D" uid="uid://c6e14tysqlehy" path="res://hdr_textures/HDR-dark-corner-photo/HDR-dark-corner-photo.exr" id="13_a4o3h"]
 [ext_resource type="Texture2D" uid="uid://ldn8byrp5u5g" path="res://hdr_textures/sobotka_Testing_Imagery/AWGv4/B002C016_220405_B09C.00796.exr" id="13_muhui"]
 [ext_resource type="Texture2D" uid="uid://pa2ohh62johi" path="res://hdr_textures/sobotka_Testing_Imagery/Matas_Alexa_Mini_sample_BT709.exr" id="14_ycvdp"]
 [ext_resource type="Texture2D" uid="uid://diaxv8sf1tuhp" path="res://hdr_textures/sobotka_Testing_Imagery/red_xmas_rec709.exr" id="15_5qwj7"]
@@ -24,7 +26,7 @@ reflected_light_source = 1
 script = ExtResource("1_piulw")
 material = ExtResource("2_q7dku")
 environment = NodePath("WorldEnvironment")
-textures = Array[Texture2D]([ExtResource("13_muhui"), ExtResource("14_ycvdp"), ExtResource("15_5qwj7"), ExtResource("1_684wq"), ExtResource("5_v3tdp"), ExtResource("3_h58op"), ExtResource("4_sfdkd"), ExtResource("10_gou42"), ExtResource("8_tpjre")])
+textures = Array[Texture2D]([ExtResource("13_muhui"), ExtResource("14_ycvdp"), ExtResource("15_5qwj7"), ExtResource("1_684wq"), ExtResource("5_v3tdp"), ExtResource("3_h58op"), ExtResource("4_sfdkd"), ExtResource("10_gou42"), ExtResource("8_tpjre"), ExtResource("12_0uckw"), ExtResource("13_a4o3h")])
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_dxs85")
