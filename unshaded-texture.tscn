@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://dc4nw3wc8i771"]
 
 [ext_resource type="Texture2D" uid="uid://bwaqqakibotfu" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max1Saturation100.exr" id="1_684wq"]
-[ext_resource type="Script" path="res://image_saver.gd" id="1_piulw"]
+[ext_resource type="Script" uid="uid://hp8w3uptp5fq" path="res://image_saver.gd" id="1_piulw"]
 [ext_resource type="Material" uid="uid://cnrs06syckbl6" path="res://unshaded-texture.material" id="2_q7dku"]
 [ext_resource type="Texture2D" uid="uid://cayf2oichpst0" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max1Saturation0.exr" id="3_h58op"]
 [ext_resource type="Texture2D" uid="uid://drh6iqd6sdl1p" path="res://hdr_textures/HDR-sRGB-saturated-colors/Max18Saturation100.exr" id="4_sfdkd"]
