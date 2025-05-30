@@ -8,7 +8,7 @@ var tonemappers: Dictionary = { # Array: white parameter, Tonemap name, Blender 
 		#Environment.TONE_MAPPER_REINHARDT: [6.0, "Reinhard", ""],
 		#Environment.TONE_MAPPER_FILMIC: [6.0, "pbrNeutral", "Filmic"],
 		#Environment.TONE_MAPPER_ACES: [6.0, "ACES", ""],
-		Environment.TONE_MAPPER_AGX: [16.29, "AgX", "AgX"],
+		Environment.TONE_MAPPER_AGX: [16.0, "AgX", "AgX"],
 }
 
 
@@ -28,13 +28,13 @@ func _ready() -> void:
 			var texture_name: String = texture.resource_path.get_basename().get_file()
 			var folder_path = "user://sdr_renders/godot/%s" % texture_name
 			DirAccess.make_dir_recursive_absolute(folder_path)
-			_save_image("%s/Godot_AgX-Approx-Timothy-Curve_%s" % [folder_path, texture_name])
+			_save_image("%s/Godot_AgX-Approx-White-Contrast_%s" % [folder_path, texture_name])
 			if blender != "":
 				var table_line: String = ""
 				table_line += " | ![Godot_AgX-Exact-Reference_%s]" % [texture_name]
 				table_line += "(https://github.com/allenwp/godot-tonemap-comparison/raw/refs/heads/main/sdr_renders/godot/%s/Godot_AgX-Exact-Reference_%s.webp)" % [texture_name, texture_name]
 				table_line += " | ![Godot_AgX-Approx-Timothy-Curve_%s]" % [texture_name]
-				table_line += "(https://github.com/allenwp/godot-tonemap-comparison/raw/refs/heads/main/sdr_renders/godot/%s/Godot_AgX-Approx-Timothy-Curve_%s.webp)" % [texture_name, texture_name]
+				table_line += "(https://github.com/allenwp/godot-tonemap-comparison/raw/refs/heads/main/sdr_renders/godot/%s/Godot_AgX-Approx-White-Contrast_%s.webp)" % [texture_name, texture_name]
 				table_line += " | ![Godot_AgX-Approx-4.4-Beta4_%s]" % [texture_name]
 				table_line += "(https://github.com/allenwp/godot-tonemap-comparison/raw/refs/heads/main/sdr_renders/godot/%s/Godot_AgX-Approx-4.4-Beta4_%s.webp)" % [texture_name, texture_name]
 				print(table_line)
