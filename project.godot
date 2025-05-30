@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Tonemap_Comparison"
 run/main_scene="res://unshaded-texture.tscn"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
