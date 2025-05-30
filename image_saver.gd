@@ -14,7 +14,7 @@ var tonemappers: Dictionary = { # Array: white parameter, Tonemap name, Blender 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print("| Exact Curve (Reference) | Approximate (this PR) | Approximate (Godot 4.4 beta 4)\n| --- | --- | ---")
+	print("| Exact Curve (Reference) | Approximate (this PR) | Approximate (Godot 4.4.1)\n| --- | --- | ---")
 	for texture in textures:
 		for tonemapper_index in tonemappers:
 			var white: float = tonemappers[tonemapper_index][0]
@@ -28,7 +28,7 @@ func _ready() -> void:
 			var texture_name: String = texture.resource_path.get_basename().get_file()
 			var folder_path = "user://sdr_renders/godot/%s" % texture_name
 			DirAccess.make_dir_recursive_absolute(folder_path)
-			_save_image("%s/Godot_AgX-Approx-White-Contrast_%s" % [folder_path, texture_name])
+			_save_image("%s/Godot_AgX-Approx-4.4.1_%s" % [folder_path, texture_name])
 			if blender != "":
 				var table_line: String = ""
 				table_line += " | ![Godot_AgX-Exact-Reference_%s]" % [texture_name]
@@ -36,7 +36,7 @@ func _ready() -> void:
 				table_line += " | ![Godot_AgX-Approx-Timothy-Curve_%s]" % [texture_name]
 				table_line += "(https://github.com/allenwp/godot-tonemap-comparison/raw/refs/heads/main/sdr_renders/godot/%s/Godot_AgX-Approx-White-Contrast_%s.webp)" % [texture_name, texture_name]
 				table_line += " | ![Godot_AgX-Approx-4.4-Beta4_%s]" % [texture_name]
-				table_line += "(https://github.com/allenwp/godot-tonemap-comparison/raw/refs/heads/main/sdr_renders/godot/%s/Godot_AgX-Approx-4.4-Beta4_%s.webp)" % [texture_name, texture_name]
+				table_line += "(https://github.com/allenwp/godot-tonemap-comparison/raw/refs/heads/main/sdr_renders/godot/%s/Godot_AgX-Approx-4.4.1_%s.webp)" % [texture_name, texture_name]
 				print(table_line)
 
 	OS.shell_show_in_file_manager(ProjectSettings.globalize_path("user://"))
